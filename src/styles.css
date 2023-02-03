@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+.deep-blue-bg {
+  background-color: #5776A2 !important;
+;
+}
+ body {
+   background-color: #F5F5F5;
+ }
+
+ .text-left {
+   text-align: left !important;
+ }
+
+ .text-right {
+   text-align: right !important;
+ }
+
+ .text-grey {
+   color: #A3A3A3 !important;
+ }

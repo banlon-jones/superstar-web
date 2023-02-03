@@ -1,0 +1,7 @@
+.pick {
+  border: none !important;
+  width: 5rem !important;
+}
+ .pick :focus{
+   border: none;
+ }

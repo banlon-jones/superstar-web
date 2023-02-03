@@ -1,0 +1,20 @@
+<form [formGroup]="phoneInput">
+  <div class="text-left">
+    <label> {{label}} </label>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+    <span class="input-group-text">
+      <select name="" class="form-control selectpicker pick" data-live-search="true" formControlName="countryCode">
+        <option value="+1" selected> +1 USA </option>
+        <option *ngFor="let country of countries" value="{{country.idd?.root}}">
+          <img src="https://flagcdn.com/w320/us.png" alt="">
+          <span> {{(country.cca3 !== "USA")? country.idd?.root + country?.idd?.suffixes: country.idd?.root}} </span>
+          <span> {{ country.name.common }} </span>
+        </option>
+      </select>
+    </span>
+    </div>
+    <input type="number" class="form-control" placeholder="{{placeholder}}" aria-label="Username" aria-describedby="basic-addon1" formControlName="phone" (blur)="emitOutput()">
+  </div>
+</form>
