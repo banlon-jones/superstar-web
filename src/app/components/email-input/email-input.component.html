@@ -1,13 +1,13 @@
-<form>
+<form [formGroup]="emailform">
   <div class="text-left">
-    <label> Email </label>
+    <label> {{label}} </label>
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
     <span class="input-group-text">
-      Email
+      {{label}}
     </span>
     </div>
-    <input type="email" class="form-control" placeholder="email" aria-label="Username" aria-describedby="basic-addon1" formControlName="phone">
+    <input type="email" class="form-control" placeholder="{{placeholder}}" aria-label="Username" aria-describedby="basic-addon1" formControlName="email" (blur)="onBlur()">
   </div>
 </form>

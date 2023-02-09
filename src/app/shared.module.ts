@@ -14,6 +14,7 @@ import { ButtonComponent } from './components/button/button.component';
 import {RouterModule} from '@angular/router';
 import { PublicFooterComponent } from './components/public-footer/public-footer.component';
 import { EmailInputComponent } from './components/email-input/email-input.component';
+import { SignInCardComponent } from './components/sign-in-card/sign-in-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EmailInputComponent } from './components/email-input/email-input.compon
     PasswordInputComponent,
     ButtonComponent,
     PublicFooterComponent,
-    EmailInputComponent
+    EmailInputComponent,
+    SignInCardComponent
   ],
   imports: [
     HttpClientModule,
@@ -36,7 +38,12 @@ import { EmailInputComponent } from './components/email-input/email-input.compon
   exports: [
     FixAlertComponent,
     LoginCardComponent,
-    PublicFooterComponent
+    PublicFooterComponent,
+    ButtonComponent,
+    EmailInputComponent,
+    PasswordInputComponent,
+    PhoneInputComponent,
+    SignInCardComponent
   ],
 })
 export class SharedModule { }

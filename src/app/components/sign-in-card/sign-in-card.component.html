@@ -1,0 +1,80 @@
+<div class="card">
+  <div class="card-header" style="background: #575757">
+    <p class="text-white"> Superstar </p>
+  </div>
+  <div class="card-body">
+    <div class="text-center">
+      <div><H3>Log In</H3></div>
+      <div>
+        <small> Choose Option </small>
+      </div>
+    </div>
+    <div>
+      <!-- Tabs navs -->
+      <ul class="nav nav-tabs mb-3 text-center d-flex justify-content-center" id="ex1" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            id="ex1-tab-1"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-1"
+            role="tab"
+            aria-controls="ex1-tabs-1"
+            aria-selected="true"
+          >Phone</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            id="ex1-tab-2"
+            data-mdb-toggle="tab"
+            href="#ex1-tabs-2"
+            role="tab"
+            aria-controls="ex1-tabs-2"
+            aria-selected="false"
+          >Email</a
+          >
+        </li>
+      </ul>
+      <!-- Tabs navs -->
+
+      <!-- Tabs content -->
+      <div class="tab-content" id="ex1-content">
+        <div
+          class="tab-pane fade show active"
+          id="ex1-tabs-1"
+          role="tabpanel"
+          aria-labelledby="ex1-tab-1"
+        >
+          <div>
+            <app-phone-input></app-phone-input>
+          </div>
+          <div>
+            <app-password-input></app-password-input>
+          </div>
+          <div class="py-4">
+            <app-button [text]="'Log In'" [bgColor]="'#37BB87'"></app-button>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+          <div>
+            <app-email-input></app-email-input>
+          </div>
+          <div>
+            <app-password-input> </app-password-input>
+          </div>
+          <div class="py-4">
+            <app-button [text]="'Log In'" [bgColor]="'#37BB87'"></app-button>
+          </div>
+        </div>
+      </div>
+      <!-- Tabs content -->
+    </div>
+  </div>
+  <div class="card-footer text-center">
+    <p>
+      Don’t have an account?<a style="color: #37BB87" routerLink="/register"> Sign Up </a>
+    </p>
+  </div>
+</div>
