@@ -10,21 +10,24 @@ export class PasswordInputComponent implements OnInit {
   passwordInput: any;
   @Input() label = '' || 'password';
   @Input() placeholder = '' || 'Enter password';
-  @Output() emitEvent = new EventEmitter<any>();
+  @Output() password = new EventEmitter<any>();
 
   constructor() { }
 
   ngOnInit(): void {
     this.passwordInput = new FormGroup({
-      password: new FormControl('', [Validators.required, Validators.minLength(4)])
+      password: new FormControl('', [Validators.required, Validators.minLength(8)])
     });
   }
 
   emitOutput(): void{
     if (this.passwordInput.valid) {
-      this.emitEvent.emit(this.passwordInput.value);
-      console.log(this.passwordInput.value);
+      this.password.emit(this.passwordInput.value);
     }
+  }
+
+  getFormControl(): any {
+    return this.passwordInput.controls;
   }
 
 }

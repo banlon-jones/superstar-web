@@ -1,6 +1,12 @@
+<div *ngIf="errors">
+  <app-alert [title]="'Error'" [message]="'Invalid email or password'" (status)="closeAlert($event)"></app-alert>
+</div>
+<div *ngIf="spinner">
+  <app-spinner [message]="'Logging in'"></app-spinner>
+</div>
 <div class="card">
-  <div class="card-header" style="background: #575757">
-    <p class="text-white"> Superstar </p>
+  <div class="card-header bg-dark-grey">
+    <h4 class="text-white text-center"> Superstar </h4>
   </div>
   <div class="card-body">
     <div class="text-center">
@@ -59,17 +65,20 @@
         </div>
         <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
           <div>
-            <app-email-input></app-email-input>
+            <app-email-input (email)="getEmail($event)"></app-email-input>
           </div>
           <div>
-            <app-password-input> </app-password-input>
+            <app-password-input (password)="getPassword($event)"> </app-password-input>
           </div>
           <div class="py-4">
-            <app-button [text]="'Log In'" [bgColor]="'#37BB87'"></app-button>
+            <app-button [text]="'Log In'" [bgColor]="'#37BB87'" (onClick)="submit()"></app-button>
           </div>
         </div>
       </div>
       <!-- Tabs content -->
+    </div>
+    <div class="text-center">
+      <a routerLink="/!#" class="text-grey"> Forgot Password?  </a>
     </div>
   </div>
   <div class="card-footer text-center">

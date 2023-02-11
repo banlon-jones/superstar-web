@@ -9,8 +9,8 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class EmailInputComponent implements OnInit {
   @Input() label = '' || 'Email';
   @Input() placeholder = '' || 'Email';
-  @Output() emitEntry = new EventEmitter();
-  emailform: any
+  @Output() email = new EventEmitter();
+  emailform: any;
   constructor() { }
 
   ngOnInit(): void {
@@ -20,10 +20,13 @@ export class EmailInputComponent implements OnInit {
   }
 
   onBlur(): void {
-    if(this.emailform.valid){
-      this.emitEntry.emit(this.emailform.value);
+    if (this.emailform.valid){
+      this.email.emit(this.emailform.value);
     }
-    console.log(this.emailform.value);
+  }
+
+  getFormControl(): any {
+    return this.emailform.controls;
   }
 
 }

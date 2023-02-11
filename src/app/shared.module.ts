@@ -15,6 +15,8 @@ import {RouterModule} from '@angular/router';
 import { PublicFooterComponent } from './components/public-footer/public-footer.component';
 import { EmailInputComponent } from './components/email-input/email-input.component';
 import { SignInCardComponent } from './components/sign-in-card/sign-in-card.component';
+import { AlertComponent } from './components/alert/alert.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SignInCardComponent } from './components/sign-in-card/sign-in-card.comp
     ButtonComponent,
     PublicFooterComponent,
     EmailInputComponent,
-    SignInCardComponent
+    SignInCardComponent,
+    AlertComponent,
+    SpinnerComponent,
   ],
   imports: [
     HttpClientModule,
@@ -43,7 +47,8 @@ import { SignInCardComponent } from './components/sign-in-card/sign-in-card.comp
     EmailInputComponent,
     PasswordInputComponent,
     PhoneInputComponent,
-    SignInCardComponent
+    SignInCardComponent,
+    AlertComponent
   ],
 })
 export class SharedModule { }

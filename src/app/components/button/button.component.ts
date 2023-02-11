@@ -10,14 +10,14 @@ export class ButtonComponent implements OnInit {
   @Input() text = '';
   @Input() bgColor = '' || 'blue';
   @Input() color = '' || 'white';
-  @Output() emitEvent = new EventEmitter<any>();
+  @Output() onClick = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onclick(): void {
-    this.emitEvent.emit();
+    this.onClick.emit();
   }
 
 }
