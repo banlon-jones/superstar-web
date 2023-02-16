@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {SignInService} from '../../services/sign-in/sign-in.service';
 import {LogInWithEmail} from '../../models/loginModel';
 
@@ -12,6 +12,7 @@ export class SignInCardComponent implements OnInit {
   email: any;
   password: any;
   spinner = false;
+  @Output() authState = new EventEmitter();
 
   constructor(private signInService: SignInService) { }
 
@@ -37,9 +38,12 @@ export class SignInCardComponent implements OnInit {
       (res: any) => {
         const data = JSON.stringify(res.data);
         localStorage.setItem('user', data);
-        // redirect to home page
+        // emit auth state true
+        console.log(true);
+        this.authState.emit(true);
       },
       (error: any) => {
+        this.authState.emit(false);
         this.errors = error;
       }
     ).add(() => this.spinner = false).unsubscribe();

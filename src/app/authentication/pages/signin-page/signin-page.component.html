@@ -1,7 +1,7 @@
 <div>
   <div class="pt-2 pt-md-5">
     <div class="d-flex justify-content-center pt-0 pt-md-5">
-      <app-sign-in-card></app-sign-in-card>
+      <app-sign-in-card (authState)="getAuthState($event)"></app-sign-in-card>
     </div>
   </div>
 </div>

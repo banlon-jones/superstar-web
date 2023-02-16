@@ -4,7 +4,7 @@
 ;
 }
  body {
-   background-color: #F5F5F5;
+   background-color: #f3f2ef;
  }
 
  .text-left {
@@ -21,4 +21,11 @@
 
  .bg-dark-grey {
    background: #575757 !important;
+ }
+
+ .bg-light-grey {
+   background: #E8E8E9 !important;
+ }
+ p {
+   font-size: 15px !important;
  }

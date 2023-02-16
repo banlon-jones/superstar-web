@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {AuthenticationModule} from './authentication/authentication.module';
 import {SharedModule} from './shared.module';
+import {MainModule} from './main/main.module';
 
 
 
@@ -16,7 +17,8 @@ import {SharedModule} from './shared.module';
     BrowserModule,
     AppRoutingModule,
     AuthenticationModule,
-    SharedModule
+    SharedModule,
+    MainModule
   ],
   providers: [],
   exports: [

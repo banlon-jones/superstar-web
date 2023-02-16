@@ -5,7 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {SharedModule} from '../shared.module';
 
 const route: Routes = [
-  { path: '/home', component: HomeComponent }
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({

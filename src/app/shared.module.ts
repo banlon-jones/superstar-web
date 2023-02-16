@@ -17,6 +17,8 @@ import { EmailInputComponent } from './components/email-input/email-input.compon
 import { SignInCardComponent } from './components/sign-in-card/sign-in-card.component';
 import { AlertComponent } from './components/alert/alert.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProfessionalCardComponent } from './components/professional-card/professional-card.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     SignInCardComponent,
     AlertComponent,
     SpinnerComponent,
+    NavbarComponent,
+    ProfessionalCardComponent,
   ],
   imports: [
     HttpClientModule,
@@ -48,7 +52,9 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     PasswordInputComponent,
     PhoneInputComponent,
     SignInCardComponent,
-    AlertComponent
+    AlertComponent,
+    NavbarComponent,
+    ProfessionalCardComponent
   ],
 })
 export class SharedModule { }
